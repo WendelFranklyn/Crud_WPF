@@ -1,0 +1,62 @@
+﻿<Window x:Class="AgendaCrud.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgendaCrud"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="600" Width="800">
+
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="auto" Background="Gray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="ID" HorizontalAlignment="Left" />
+            <TextBox x:Name="txtID" HorizontalAlignment="Left" Grid.Row="1" Margin="8" Height="16" Width="120" TextWrapping="Wrap"/>
+            <Label Content="Nome" HorizontalAlignment="Left" Grid.Row="2"/>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Grid.Row="3"  Margin="8" Height="16" Width="120" TextWrapping="Wrap"/>
+            <Label Content="E-Mail" HorizontalAlignment="Left" Grid.Row="4"  />
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Grid.Row="5" Margin="8" Height="16" Width="120" TextWrapping="Wrap"/>
+            <Label Content="Telefone" HorizontalAlignment="Left" Grid.Row="6" />
+            <TextBox x:Name="txtTelephone" HorizontalAlignment="Left" Grid.Row="7" Margin="8" Height="16" Width="120" TextWrapping="Wrap"/>
+            <DataGrid x:Name="dgData" Margin="8" Height="200" Grid.Row="8"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnInsert" Content="Inserir" Margin="8" FontWeight="Bold" Click="btnInsert_Click"/>
+            <Button x:Name="btnToAlter" Content="Alterar" Grid.Column="1" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnLocate" Content="Localizar" Grid.Column="2" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnDelete" Content="Excluir" Grid.Column="3" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnSave" Content="Salvar" Grid.Column="4" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnCancel" Content="Cancelar" Grid.Column="4" Margin="8" FontWeight="Bold"/>
+
+        </Grid>
+    </Grid>
+</Window>
