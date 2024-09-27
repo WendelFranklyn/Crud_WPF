@@ -51,11 +51,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="btnInsert" Content="Inserir" Margin="8" FontWeight="Bold" Click="btnInsert_Click"/>
-            <Button x:Name="btnToAlter" Content="Alterar" Grid.Column="1" Margin="8" FontWeight="Bold"/>
-            <Button x:Name="btnLocate" Content="Localizar" Grid.Column="2" Margin="8" FontWeight="Bold"/>
-            <Button x:Name="btnDelete" Content="Excluir" Grid.Column="3" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnToAlter" Content="Alterar" IsEnabled="False" Grid.Column="1" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnLocate" Content="Localizar"  Grid.Column="2" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnDelete" Content="Excluir" IsEnabled="False" Grid.Column="3" Margin="8" FontWeight="Bold"/>
             <Button x:Name="btnSave" Content="Salvar" Grid.Column="4" Margin="8" FontWeight="Bold"/>
-            <Button x:Name="btnCancel" Content="Cancelar" Grid.Column="4" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnCancel" Content="Cancelar" IsEnabled="False" Grid.Column="4" Margin="8" FontWeight="Bold"/>
 
         </Grid>
     </Grid>
