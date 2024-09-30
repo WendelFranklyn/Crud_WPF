@@ -51,12 +51,25 @@ namespace AgendaCrud
             }
             // Atualiza a exibição dos contatos no DataGrid
             this.ListContacts();
+            this.AlterButton(1);
+            this.Clear();
+        }
+        private void Clear()
+        {
+            txtID.IsEnabled = true;
+            txtID.Clear();
+            txtEmail.Clear();
+            txtEmail.Clear();
+            txtTelephone.Clear();
         }
 
         private void btnInsert_Click(object sender, RoutedEventArgs e)
         {
             // Define que a operação atual é "Inserir"
             this.operation = "Inserir";
+            this.AlterButton(2);
+            txtID.Text = "";
+            txtID.IsEnabled = false;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -91,6 +104,22 @@ namespace AgendaCrud
                 btnInsert.IsEnabled = true;
                 btnLocate.IsEnabled = true;
             }
+            if(options == 2)
+            {
+                btnCancel.IsEnabled = true;
+                btnSave.IsEnabled = true;
+            }
+            if(options == 3)
+            {
+                btnToAlter.IsEnabled = true;
+                btnDelete.IsEnabled=true;
+            }
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.AlterButton(1);
+            this.Clear();
         }
     }
 }
