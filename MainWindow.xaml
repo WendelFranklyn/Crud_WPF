@@ -32,6 +32,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Label Content="ID" HorizontalAlignment="Left" />
             <TextBox x:Name="txtID" HorizontalAlignment="Left" Grid.Row="1" Margin="8" Height="16" Width="120" TextWrapping="Wrap"/>
@@ -41,7 +42,8 @@
             <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Grid.Row="5" Margin="8" Height="16" Width="120" TextWrapping="Wrap"/>
             <Label Content="Telefone" HorizontalAlignment="Left" Grid.Row="6" />
             <TextBox x:Name="txtTelephone" HorizontalAlignment="Left" Grid.Row="7" Margin="8" Height="16" Width="120" TextWrapping="Wrap"/>
-            <DataGrid x:Name="dgData" Margin="8" Height="200" Grid.Row="8" IsReadOnly="True"/>
+            <Label Content="Quantidade de contatos" x:Name="lbQtdContacts" Grid.Row="8"></Label>
+            <DataGrid x:Name="dgData" MouseDoubleClick="dgData_MouseDoubleClick" SelectionMode="Single" Margin="8" Height="200" Grid.Row="9" IsReadOnly="True"/>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="8">
             <Grid.ColumnDefinitions>
@@ -53,10 +55,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="btnInsert" Content="Inserir" Margin="8" FontWeight="Bold" Click="btnInsert_Click"/>
-            <Button x:Name="btnToAlter" Content="Alterar" Grid.Column="1" Margin="8" FontWeight="Bold"/>
-            <Button x:Name="btnLocate" Content="Localizar"  Grid.Column="2" Margin="8" FontWeight="Bold"/>
-            <Button x:Name="btnDelete" Content="Excluir" Grid.Column="3" Margin="8" FontWeight="Bold"/>
-            <Button x:Name="btnSave" Content="Salvar" Grid.Column="4" Margin="8" FontWeight="Bold"/>
+            <Button x:Name="btnToAlter" Content="Alterar" Grid.Column="1" Margin="8" FontWeight="Bold" Click="btnToAlter_Click"/>
+            <Button x:Name="btnLocate" Content="Localizar"  Grid.Column="2" Margin="8,8,8,0" FontWeight="Bold" Height="56" VerticalAlignment="Top" Click="btnLocate_Click"/>
+            <Button x:Name="btnDelete" Content="Excluir" Grid.Column="3" Margin="8" FontWeight="Bold" Click="btnDelete_Click"/>
+            <Button x:Name="btnSave" Content="Salvar" Click="btnSave_Click" Grid.Column="4" Margin="8" FontWeight="Bold"/>
             <Button x:Name="btnCancel" Content="Cancelar" Grid.Column="5" Margin="8" FontWeight="Bold" Click="btnCancel_Click"/>
 
         </Grid>
